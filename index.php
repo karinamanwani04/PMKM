@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+include("config/db.php");
+
+
+$currentUser = null;
+
+if(isset($_SESSION['user_id'])){
+
+    $uid = $_SESSION['user_id'];
+
+    $currentUser = $conn->query(
+
+    "SELECT * FROM users WHERE id=$uid"
+
+    )->fetch_assoc();
+}
+
+?>
 <?php include("config/db.php"); ?>
 
 <?php
@@ -23,6 +44,8 @@ $topCompany = $topCompanyResult->fetch_assoc();
     <title>Company Directory</title>
     <link rel="stylesheet" href="style.css?v=2">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    
 </head>
 
 <body id="body">
@@ -34,7 +57,87 @@ $topCompany = $topCompanyResult->fetch_assoc();
                 </button> </h2>
             <h4 style="text-align:right;">Presented by: <b>Karina Manwani & Payal Maghnani</b></h4>
         </div>
+<div style="display:flex; gap:12px; align-items:center;">
 
+<?php
+
+if(!$currentUser){
+
+?>
+
+<a href="login.php">
+
+    <button>
+
+        Sign In
+
+    </button>
+
+</a>
+
+<a href="register.php">
+
+    <button>
+
+        Create Account
+
+    </button>
+
+</a>
+
+<?php
+
+}else{
+
+    if($currentUser['role'] == 'admin'){
+
+?>
+
+<a href="admin.php">
+
+    <button>
+
+        Admin Dashboard
+
+    </button>
+
+</a>
+
+<?php
+
+    }else{
+
+?>
+
+<a href="dashboard.php">
+
+    <button>
+
+        User Dashboard
+
+    </button>
+
+</a>
+
+<?php
+
+    }
+
+?>
+
+<a href="logout.php">
+
+    <button>
+
+        Logout
+
+    </button>
+
+</a>
+
+<?php } ?>
+
+</div>
 
     </div>
 
@@ -123,6 +226,7 @@ $topCompany = $topCompanyResult->fetch_assoc();
                 <canvas id="categoryChart"></canvas>
 
             </div>
+            
 
         </div>
     </div>

@@ -1,599 +1,499 @@
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
 /* 🔥 BODY */
+
 body{
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #f3f4f8;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#eef2ff,#f8fafc);
+    color: #111827;
+    overflow-x: hidden;
 }
+
 
 /* 🔥 HEADER */
+
 .header{
-    background: linear-gradient(90deg, #4f46e5, #6366f1);
+
+    background: linear-gradient(135deg,#4338ca,#6366f1,#7c3aed);
+
     color: white;
-    padding: 18px 25px;
+
+    padding: 20px 28px;
+
     font-size: 24px;
+
     font-weight: 600;
+
+    box-shadow: 0 10px 30px rgba(79,70,229,0.25);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
 }
 
+
 /* 🔥 CONTAINER */
+
 .container{
-    width: 90%;
+    width: 92%;
     margin: 30px auto;
 }
 
+
 /* 🔥 PAGE TITLE */
+
 .pageTitle{
     text-align: center;
-    color: #222;
-    margin-bottom: 20px;
+    color: #312e81;
+    margin-bottom: 25px;
+    font-size: 38px;
+    font-weight: 700;
 }
 
-/* 🔍 SEARCH SECTION */
+
+/* 🔍 SEARCH */
+
 .searchSection{
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .searchSection input{
-    width: 50%;
-    padding: 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
+
+    width: 55%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 14px;
+
     outline: none;
+
     font-size: 15px;
+
     background: white;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
 }
 
+.searchSection input:focus{
+
+    box-shadow: 0 0 0 5px rgba(99,102,241,0.18);
+
+    border: 1px solid #6366f1;
+}
+
+
 /* 🔥 MAIN LAYOUT */
+
 .mainLayout{
     display: flex;
     gap: 25px;
     align-items: flex-start;
 }
 
+
 /* 📋 TABLE BOX */
+
 .tableBox{
+
     flex: 3;
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(10px);
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
 }
+
+.tableBox:hover{
+
+    transform: translateY(-5px);
+}
+
 
 /* 🎯 FILTER BOX */
+
 .filterBox{
+
     flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(10px);
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
 }
 
-/* 🔥 FILTER HEADING */
-.filterBox h3{
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #222;
+.filterBox:hover{
+
+    transform: translateY(-5px);
 }
+
+
+/* 🔥 FILTER HEAD */
+
+.filterBox h3{
+
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    color: #312e81;
+
+    font-size: 22px;
+}
+
 
 /* 🔥 LABELS */
+
 .filterBox label{
+
     display: block;
+
     margin-top: 15px;
+
     margin-bottom: 8px;
+
     font-weight: 500;
-    color: #333;
+
+    color: #374151;
 }
 
+
 /* 🔥 SELECT */
+
 .filterBox select{
+
     width: 100%;
-    padding: 12px;
+
+    padding: 13px;
+
     border: 1px solid #ddd;
-    border-radius: 8px;
+
+    border-radius: 12px;
+
     outline: none;
+
     font-size: 14px;
+
     background: white;
 }
 
+
 /* 🔥 TABLE */
+
 table{
+
     width: 100%;
+
     border-collapse: collapse;
+
     margin-top: 15px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
 }
 
+
 /* 🔥 TABLE HEAD */
+
 th{
+
     background: #eef2ff;
-    padding: 14px;
+
+    padding: 16px;
+
     text-align: left;
-    color: #333;
+
+    color: #312e81;
+
     font-size: 15px;
+
+    font-weight: 600;
+
     cursor: pointer;
 }
 
+
 /* 🔥 TABLE DATA */
+
 td{
-    padding: 14px;
+
+    padding: 15px;
+
     border-bottom: 1px solid #eee;
+
     color: #444;
 }
 
+
 /* 🔥 ROW HOVER */
+
 tr:hover{
-    background: #f9fafb;
+
+    background: #eef2ff;
+
+    transform: scale(1.01);
 }
 
+
 /* 🔥 LINKS */
+
 a{
+
     text-decoration: none;
+
     color: #4f46e5;
+
     font-weight: 500;
 }
 
 a:hover{
-    text-decoration: underline;
+
+    color: #312e81;
 }
 
+
 /* 🔥 BUTTONS */
+
 button{
-    background: #4f46e5;
+
+    background: linear-gradient(135deg,#4f46e5,#6366f1);
+
     color: white;
+
     border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
+
+    padding: 11px 20px;
+
+    border-radius: 12px;
+
     cursor: pointer;
+
     transition: 0.3s;
+
+    font-weight: 600;
+
+    box-shadow: 0 6px 18px rgba(79,70,229,0.25);
 }
 
 button:hover{
-    background: #4338ca;
+
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 12px 25px rgba(79,70,229,0.35);
 }
 
+
 /* 📄 PAGINATION */
+
 .pagination{
-    margin-top: 25px;
+
+    margin-top: 28px;
+
     text-align: center;
 }
 
 .pagination button{
+
     margin: 5px;
 }
 
-/* 🔥 DETAIL PAGE CARD */
-.card{
-    background: white;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+/* 🔥 CARDS */
+
+.card,
+.chartBox,
+.statCard,
+.favoriteBox,
+.quickStats,
+.descriptionBox,
+.graphBox,
+.smallChart,
+.stockChart,
+.bigAnalytics{
+
+    background: rgba(255,255,255,0.92);
+
+    backdrop-filter: blur(10px);
+
+    padding: 24px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
 }
 
-/* 🔥 DESCRIPTION */
-#desc{
-    line-height: 1.8;
-    color: #444;
+.card:hover,
+.chartBox:hover,
+.statCard:hover,
+.favoriteBox:hover,
+.quickStats:hover,
+.descriptionBox:hover,
+.graphBox:hover,
+.smallChart:hover,
+.stockChart:hover,
+.bigAnalytics:hover{
+
+    transform: translateY(-6px);
 }
 
-/* 🔥 SUMMARY BOX */
-#summary{
-    margin-top: 20px;
-    padding: 15px;
-    background: #f9fafb;
-    border-radius: 10px;
-    border: 1px solid #eee;
-    line-height: 1.7;
-}
 
-/* 📊 Stats Grid */
+/* 📊 STATS */
+
 .statsGrid{
+
     display: flex;
+
     gap: 20px;
+
     margin-bottom: 25px;
 }
 
-/* 🔥 Stat Card */
 .statCard{
+
     flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 .statCard p{
-    font-size: 22px;
-    font-weight: bold;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
     color: #4f46e5;
 }
 
-/* 📈 Chart Box */
-.chartBox{
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
+
+/* 🔥 DASHBOARD */
+
+.dashboardSection{
+
+    display: flex;
+
+    gap: 20px;
+
     margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
-/* 🌙 DARK MODE */
-body.darkMode{
-    background: #111827 !important;
-    color: white !important;
+.leftSection{
+
+    width: 35%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
 }
 
-/* 🔥 HEADER */
-body.darkMode .header{
-    background: #0f172a !important;
+.topCards{
+
+    display: flex;
+
+    gap: 15px;
 }
 
-/* 🔥 CARDS */
-body.darkMode .tableBox,
-body.darkMode .filterBox,
-body.darkMode .card,
-body.darkMode .chartBox,
-body.darkMode .statCard,
-body.darkMode .favoriteBox,
-body.darkMode .quickStats,
-body.darkMode .descriptionBox,
-body.darkMode .graphBox,
-body.darkMode .smallChart{
-    background: #1f2937 !important;
-    color: white !important;
+
+/* 📄 DESCRIPTION */
+
+.descriptionBox p{
+
+    margin-top: 12px;
+
+    font-size: 15px;
 }
 
-/* 🔥 TEXT */
-body.darkMode h1,
-body.darkMode h2,
-body.darkMode h3,
-body.darkMode p,
-body.darkMode td,
-body.darkMode th,
-body.darkMode a,
-body.darkMode label{
-    color: white !important;
+
+/* 📊 GRAPH */
+
+.graphBox{
+
+    width: 65%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 500px;
 }
 
-/* 🔥 TABLE */
-body.darkMode table{
-    background: #1f2937 !important;
+.graphBox canvas{
+
+    width: 650px !important;
+
+    height: 550px !important;
 }
 
-body.darkMode th{
-    background: #374151 !important;
-}
 
-body.darkMode tr:hover{
-    background: #374151 !important;
-}
+/* ⭐ RATINGS */
 
-/* 🔥 INPUTS */
-body.darkMode input,
-body.darkMode select{
-    background: #374151 !important;
-    color: white !important;
-    border: 1px solid #555 !important;
-}
-
-/* 🔥 SUMMARY BOX */
-body.darkMode #summary{
-    background: #374151 !important;
-    color: white !important;
-}
-
-/* ⭐ RATING COLORS */
 .greenRating{
-    color: green;
+
+    color: #16a34a;
+
     font-weight: bold;
 }
 
 .yellowRating{
-    color: orange;
+
+    color: #ca8a04;
+
     font-weight: bold;
 }
 
 .redRating{
-    color: red;
+
+    color: #dc2626;
+
     font-weight: bold;
 }
 
-/* ❤️ TOP BUTTONS */
-.topActions{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-/* 🔥 DASHBOARD */
-.dashboardSection{
-    display: flex;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-
-/* 🔥 LEFT */
-.leftSection{
-    width: 35%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* 🔥 TOP SMALL CARDS */
-.topCards{
-    display: flex;
-    gap: 15px;
-}
-
-/* ❤️ FAVORITE */
-.favoriteBox{
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    min-height: 170px;
-}
-
-/* 📊 QUICK STATS */
-.quickStats{
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    line-height: 1.8;
-}
-
-/* 📄 EXPLANATION */
-.descriptionBox{
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    line-height: 2;
-    flex: 1;
-}
-
-.descriptionBox p{
-    margin-top: 12px;
-    font-size: 15px;
-}
-
-/* 📊 BIG GRAPH */
-.graphBox{
-    width: 65%;
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 500px;
-}
-
-/* 🍩 GRAPH */
-.graphBox canvas{
-    width: 650px !important;
-    height: 550px !important;
-}
-
-/* 📊 DETAIL PAGE CHARTS */
-.chartsGrid{
-    display: flex;
-    gap: 20px;
-    margin-top: 25px;
-    justify-content: center;
-}
-
-/* 🔥 SMALL CHART CARD */
-.smallChart{
-    width: 320px;
-    height: 260px;
-    background: white;
-    padding: 15px;
-    border-radius: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    overflow: hidden;
-}
-
-/* 🔥 TITLE */
-.smallChart h2{
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-/* 🔥 CHART */
-.smallChart canvas{
-    width: 100% !important;
-    height: 180px !important;
-}
-
-/* 📱 RESPONSIVE */
-@media(max-width: 900px){
-
-    .mainLayout{
-        flex-direction: column;
-    }
-
-    .searchSection input{
-        width: 90%;
-    }
-
-    .statsGrid{
-        flex-direction: column;
-    }
-
-    .dashboardSection{
-        flex-direction: column;
-    }
-
-    .leftSection,
-    .graphBox{
-        width: 100%;
-    }
-
-    .chartsGrid{
-        flex-direction: column;
-        align-items: center;
-    }
-}
-/* 📊 BIG ANALYTICS */
-
-.bigAnalytics{
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
-    margin-top: 25px;
-
-    margin-bottom: 25px;
-}
-
-/* 📈 BOTTOM CHARTS */
-
-.bottomCharts{
-
-    display: flex;
-
-    gap: 20px;
-}
-
-/* 📉 SMALL CHART */
-
-.smallChart{
-
-    flex: 1;
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* 📊 CHART SIZE */
-
-.smallChart canvas{
-
-    width: 100% !important;
-
-    height: 220px !important;
-}
 
 /* 🌙 DARK MODE */
-
-body.darkMode .bigAnalytics,
-body.darkMode .smallChart{
-
-    background: #1f2937;
-
-    color: white;
-}
-
-/* 📱 MOBILE */
-
-@media(max-width:900px){
-
-    .bottomCharts{
-
-        flex-direction: column;
-    }
-
-}
-/* 📈 STOCK CHARTS */
-
-.bottomCharts{
-
-    display: flex;
-
-    gap: 20px;
-
-    margin-top: 20px;
-}
-
-/* 📉 STOCK CARD */
-
-.stockChart{
-
-    width: 48%;
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-/* 📊 STOCK CANVAS */
-
-.stockChart canvas{
-
-    width: 100% !important;
-
-    height: 200px !important;
-}
-
-/* 📊 BIG ANALYTICS */
-
-.bigAnalytics{
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-
-    margin-top: 25px;
-}
-
-.bigAnalytics canvas{
-
-    width: 100% !important;
-
-    max-height: 350px !important;
-}
-
-/* 🌙 DARK MODE */
-
-body.darkMode .stockChart,
-body.darkMode .bigAnalytics{
-
-    background: #1f2937;
-
-    color: white;
-}
-/* 🌙 FULL PAGE DARK */
-
-body.darkMode{
-
-    background: #111827 !important;
-
-    color: white !important;
-}
-/* 🌙 FORCE BLUE DARK MODE */
 
 body.darkMode{
 
     background: #0f172a !important;
+
+    color: white !important;
 }
 
-/* 🔥 ALL BOXES */
+body.darkMode .header{
 
-body.darkMode .card,
+    background: linear-gradient(135deg,#1e3a8a,#2563eb) !important;
+}
+
 body.darkMode .tableBox,
 body.darkMode .filterBox,
+body.darkMode .card,
 body.darkMode .chartBox,
 body.darkMode .statCard,
 body.darkMode .favoriteBox,
@@ -602,8 +502,7 @@ body.darkMode .descriptionBox,
 body.darkMode .graphBox,
 body.darkMode .smallChart,
 body.darkMode .stockChart,
-body.darkMode .bigAnalytics,
-body.darkMode .detailCard{
+body.darkMode .bigAnalytics{
 
     background: #1e293b !important;
 
@@ -611,8 +510,6 @@ body.darkMode .detailCard{
 
     border: 1px solid #334155 !important;
 }
-
-/* 🔥 TABLE */
 
 body.darkMode table{
 
@@ -633,39 +530,44 @@ body.darkMode td{
     color: #dbeafe !important;
 }
 
-/* 🔥 ROW HOVER */
-
 body.darkMode tr:hover{
 
     background: #334155 !important;
 }
-
-/* 🔥 INPUTS */
 
 body.darkMode input,
 body.darkMode select{
 
     background: #334155 !important;
 
-    color: #dbeafe !important;
+    color: white !important;
 
     border: 1px solid #60a5fa !important;
 }
 
-/* 🔥 SUMMARY */
 
-body.darkMode #summary{
+/* 📱 RESPONSIVE */
 
-    background: #334155 !important;
+@media(max-width:900px){
 
-    color: #dbeafe !important;
-}
+    .mainLayout{
+        flex-direction: column;
+    }
 
-/* 🔥 CHART WRAPPERS */
+    .dashboardSection{
+        flex-direction: column;
+    }
 
-body.darkMode canvas{
+    .leftSection,
+    .graphBox{
+        width: 100%;
+    }
 
-    background: #1e293b !important;
+    .statsGrid{
+        flex-direction: column;
+    }
 
-    border-radius: 10px;
+    .searchSection input{
+        width: 90%;
+    }
 }

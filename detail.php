@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <?php include("config/db.php");
 
 $id = $_GET['id'];
@@ -50,7 +55,42 @@ $symbol = $row['stock_symbol'];
                 <button onclick="downloadReport()">
                     📄 Download Report
                 </button>
+            <?php if(isset($_SESSION['user_id'])){ ?>
 
+<form action="invest.php" method="POST">
+
+    <input
+    type="hidden"
+    name="company_id"
+    value="<?php echo $row['id']; ?>">
+
+    <input
+    type="number"
+    name="points"
+    placeholder="Enter Points"
+    required>
+
+    <button type="submit">
+
+        💰 Invest Now
+
+    </button>
+
+</form>
+
+<?php }else{ ?>
+
+<a href="login.php">
+
+    <button>
+
+        Login To Invest
+
+    </button>
+
+</a>
+
+<?php } ?>
             </div>
 
             <h2><?php echo $row['name']; ?></h2>
